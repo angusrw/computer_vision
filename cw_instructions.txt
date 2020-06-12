@@ -1,0 +1,59 @@
+README
+
+In this repository you will find source code for our IPCV coursework.
+
+1) Subtask 1:
+Our source code is contained in the file subtask1.cpp
+To Use:
+ - edit line 39 to be the desired image, eg
+   Mat frame = imread("images/<image>.jpg", CV_LOAD_IMAGE_COLOR);
+ - edit line 41 to the corresponding .csv for automatic generation of F1 score, eg
+   std::ifstream file("csvs/<imagecsv>.csv");
+ - compile with
+   g++ subtask1.cpp /usr/lib64/libopencv_core.so.2.4  /usr/lib64/libopencv_highgui.so.2.4  /usr/lib64/libopencv_imgproc.so.2.4  /usr/lib64/libopencv_objdetect.so.2.4
+ - use with ./a.out
+
+2) Subtask 2:
+Our source code is contained in the file subtask2.cpp
+To Use:
+ - edit line 38 to be the desired image, eg
+   Mat frame0 = imread("images/dart8.jpg", CV_LOAD_IMAGE_COLOR);
+ - edit line 41 to the corresponding .csv for automatic generation of F1 score, eg
+   std::ifstream file("csvs/<imagecsv>.csv");
+ - compile with
+   g++ subtask2.cpp /usr/lib64/libopencv_core.so.2.4  /usr/lib64/libopencv_highgui.so.2.4  /usr/lib64/libopencv_imgproc.so.2.4  /usr/lib64/libopencv_objdetect.so.2.4
+ - use with ./a.out
+
+3) Subtask 3:
+To use our combined detector to produce an image with drawn bounding boxes detected.jpg
+ - source code is dart_hough.cpp
+ - compile with
+   g++ dart_hough.cpp /usr/lib64/libopencv_core.so.2.4  /usr/lib64/libopencv_highgui.so.2.4  /usr/lib64/libopencv_imgproc.so.2.4  /usr/lib64/libopencv_objdetect.so.2.4
+ - use with ./a.out images/<image>.jpg
+
+To automatically generate F1 scores based on the image
+ - source code is dart_hough_f1.cpp
+ - edit line 58 to the desired image, eg
+   Mat frame0 = imread("images/<image>.jpg", CV_LOAD_IMAGE_COLOR);
+ - edit line 61 to the corresponding .csv
+   std::ifstream file("csvs/<imagecsv>.csv");
+ - compile with
+   g++ dart_hough_f1.cpp /usr/lib64/libopencv_core.so.2.4  /usr/lib64/libopencv_highgui.so.2.4  /usr/lib64/libopencv_imgproc.so.2.4  /usr/lib64/libopencv_objdetect.so.2.4
+ - use with ./a.out
+
+4) Subtask 4:
+To use our improved detector to produce an image with drawn bounding boxes detected.jpg
+ - source code is dart_pro_timer.cpp
+ - compile with
+   g++ dart_pro_timer.cpp /usr/lib64/libopencv_core.so.2.4  /usr/lib64/libopencv_highgui.so.2.4  /usr/lib64/libopencv_imgproc.so.2.4  /usr/lib64/libopencv_objdetect.so.2.4
+ - use with ./a.out images/<image>.jpg
+
+To automatically generate F1 scores based on the image
+ - source code is dart_prob_f1.cpp
+ - edit line 62 to the desired image, eg
+   Mat frame0 = imread("images/<image>.jpg", CV_LOAD_IMAGE_COLOR);
+ - edit line 65 to the corresponding .csv
+   std::ifstream file("csvs/<imagecsv>.csv");
+ - compile with
+   g++ dart_prob_f1.cpp /usr/lib64/libopencv_core.so.2.4  /usr/lib64/libopencv_highgui.so.2.4  /usr/lib64/libopencv_imgproc.so.2.4  /usr/lib64/libopencv_objdetect.so.2.4
+ - use with ./a.out
